@@ -1,0 +1,31 @@
+{
+  "name": "images-downloader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --require ts-node/register test/*.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekoarr/Images-downloader.git"
+  },
+  "author": "ekoarr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ekoarr/Images-downloader/issues"
+  },
+  "homepage": "https://github.com/ekoarr/Images-downloader#readme",
+  "devDependencies": {
+    "@types/assert": "^1.5.4",
+    "@types/chai": "^4.2.18",
+    "@types/mocha": "^8.2.2",
+    "assert": "^2.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.0",
+    "ts-node": "^10.0.0"
+  }
+}
