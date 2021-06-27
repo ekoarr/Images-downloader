@@ -17,13 +17,22 @@ class ImagesDownloader implements ImagesDownloaderProps {
             const res = await axios({
                 method: 'get',
                 url: this.url,
-                responseType: 'stream'
+                responseType: 'arraybuffer'
             })
-            this.imageData = res.data
+            this.imageData = Buffer.from(res.data, "utf-8");
             return this
         } catch (err) {
+            console.log(err)
             throw new Error('download image failed')
         }
+    }
+
+    output = () => {
+        console.log(this.imageData)
+        fs.writeFile(this.distPath, this.imageData, function(err) {
+            console.log(err)
+            throw new Error('output image failed')
+        })
     }
 
     addWaterMark = () => {

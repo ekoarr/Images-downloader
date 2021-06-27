@@ -8,7 +8,7 @@ import 'mocha';
 describe('Init ImagesDownloader function', () => {
     it('should return ImagesRequestProps', async () => {
         const download1 = new ImagesDownloader('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png', 1, 'test');
-        let result = await download1.download()
+        let result = (await download1.download()).output();
         expect(result).to.be.an('object');
     });
 });

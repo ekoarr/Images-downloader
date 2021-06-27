@@ -13,6 +13,7 @@ export interface ParsedProps extends ImagesRequestProps {
 
 export interface ImagesDownloaderProps {
     download: () => void
+    output: ()=>void
     addWaterMark: () => void
 }
 
