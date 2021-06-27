@@ -12,6 +12,12 @@ export interface ParsedProps extends ImagesRequestProps {
 }
 
 export interface ImagesDownloaderProps {
-    request: () => void
-    output: () => ParsedProps & ImagesRequestProps
+    download: () => void
+    addWaterMark: () => void
 }
+
+type ResultSuccess<T> = { type: 'success'; value: T }
+
+type ResultError = { type: 'error'; error: Error }
+
+type Result<T> = ResultSuccess<T> | ResultError
